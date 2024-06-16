@@ -1,0 +1,34 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Open Sans", sans-serif;
+}
+
+::selection{
+    color: white;
+    background-color: black;
+}
+
+/* float */
+.fl1{float: left;}
+.fl2{float: right;}
+
+/* height */
+.h1{height: 50px;}
+
+/* font-size */
+.f1{font-size: 10px;}
+
+/* background-color */
+.bg1{background-color: #ff4545;}
+
+/* color */
+.cl1{color: white;}
+
+/* image */
+.logo{font-size: 150px;}
+
+
+/* footer */
+.btn3{padding: 10px 15px;color: white;background-color: #ff4545;border: none;}
+
