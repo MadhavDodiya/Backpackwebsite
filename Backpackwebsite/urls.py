@@ -22,7 +22,7 @@ from webApp import views
 
 admin.site.site_header = 'Backpack website'                    # default: "Django Administration"
 admin.site.index_title = 'Madhav"s Website'                 # default: "Site administration"
-admin.site.site_title = 'HTML title from adminsitration'
+admin.site.site_title = 'Madhav"s Website'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
