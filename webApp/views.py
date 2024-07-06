@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+from webApp.models import Information
+
 # Create your views here.
 
 def index(request):
@@ -22,3 +24,14 @@ def cart(request):
 
 def signup(request):
     return render(request, 'signup.html')
+
+def data(request):
+    a = request.POST.get('fname')
+    b = request.POST.get('lname')
+    c = request.POST.get('email')
+    d = request.POST.get('comment')
+    
+    obj=Information(firstname=a,lastname=b,email=c,comment=d)
+    obj.save()
+    return render(request, 'contact.html')
+    

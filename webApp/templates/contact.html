@@ -199,26 +199,27 @@
       </div>
 
       <div class="col-md-6">
-        <form>
+        <form action="data" method="POST">
+          {% csrf_token %}
           <div class="col-md-12">
             <div class="row">
               <div class="col-md-6">
-                <input type="text" placeholder="First Name" required class="w-100 p-2"
+                <input type="text" placeholder="First Name" required class="w-100 p-2" name="fname"
                   style="outline: none;border: 1px solid #80808048;background-color:#f5f5f5;">
               </div>
               <div class="col-md-6">
-                <input type="text" placeholder="Last Name" required class="w-100 p-2"
+                <input type="text" placeholder="Last Name" required class="w-100 p-2" name="lname"
                   style="outline: none;border: 1px solid #80808048;background-color:#f5f5f5;">
               </div>
             </div>
             <!-- email -->
             <div class="col-md-12 mt-3">
-              <input type="email" placeholder="Email" required class="w-100 p-2"
+              <input type="email" placeholder="Email" required class="w-100 p-2" name="email"
                 style="outline: none;border: 1px solid #80808048;background-color:#f5f5f5;">
             </div>
 
             <div class="col-md-12 mt-3">
-              <textarea placeholder="Comment" rows="7" class="w-100 p-2"
+              <textarea placeholder="Comment" rows="7" class="w-100 p-2" name="comment"
                 style="outline: none;border: 1px solid #80808048;background-color:#f5f5f5;"></textarea>
             </div>
 

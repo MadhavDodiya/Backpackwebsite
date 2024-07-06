@@ -32,5 +32,6 @@ urlpatterns = [
     path('account', views.account),
     path('contact', views.contact),
     path('cart', views.cart),
-    path('signup', views.signup)
+    path('signup', views.signup),
+    path('data', views.data)
 ]
