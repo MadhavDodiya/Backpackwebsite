@@ -50,8 +50,24 @@
       font-weight: 600;
     }
 
-    .btn1{padding: 10px 25px;color: white;border-radius: 50px;background-color: #dc3545;border: none;font-weight: 500;}
-    .btn1:hover{padding: 10px 25px;color: white;border-radius: 50px;background-color: #ff4545;border: none;font-weight: 500;transition: 0.5s;}
+    .btn1 {
+      padding: 10px 25px;
+      color: white;
+      border-radius: 50px;
+      background-color: #dc3545;
+      border: none;
+      font-weight: 500;
+    }
+
+    .btn1:hover {
+      padding: 10px 25px;
+      color: white;
+      border-radius: 50px;
+      background-color: #ff4545;
+      border: none;
+      font-weight: 500;
+      transition: 0.5s;
+    }
 
     /*footer*/
     .fs1 {
@@ -157,6 +173,17 @@
     </div>
   </div>
 
+  <!-- alert box -->
+  {% for message in messages %}
+  <div class="container">
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+      <strong>DONE BRO DONE!</strong> {{ message }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+   </div>
+   {% endfor %}
+  <!-- alert box end -->
+
   <div class="container mt-5 mb-5">
     <div class="row">
       <div class="col-md-6">
@@ -180,7 +207,8 @@
               </div>
               <div class="col-md-10 p-0">
                 <p class="p-0 m-0"><b>Email</b></p>
-                <p class="p-0 m-0"><a href="contact@website.com" style="text-decoration: none;color: black">contact@website.com</a></p>
+                <p class="p-0 m-0"><a href="contact@website.com"
+                    style="text-decoration: none;color: black">contact@website.com</a></p>
               </div>
             </div>
           </div>

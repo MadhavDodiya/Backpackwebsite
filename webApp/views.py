@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
+from django.contrib import messages
 
 from webApp.models import Information
 
@@ -33,5 +34,6 @@ def data(request):
     
     obj=Information(firstname=a,lastname=b,email=c,comment=d)
     obj.save()
-    return render(request, 'contact.html')
+    messages.success(request, "Your profile was updated.")
+    return redirect("/contact")
     
