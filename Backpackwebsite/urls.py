@@ -18,7 +18,10 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
+from Backpackwebsite import settings
 from webApp import views
+from django.conf.urls.static import static  
+
 
 admin.site.site_header = 'Backpack website'                    # default: "Django Administration"
 admin.site.index_title = 'Madhav"s Website'                 # default: "Site administration"
@@ -26,12 +29,13 @@ admin.site.site_title = 'Madhav"s Website'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index', views.index),
+    path('', views.index),
     path('shop', views.shop),
     path('blog', views.blog),
     path('account', views.account),
     path('contact', views.contact),
     path('cart', views.cart),
     path('signup', views.signup),
-    path('data', views.data)
+    path('data', views.data),
+    # path('register', views.data)
 ]

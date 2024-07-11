@@ -1,7 +1,7 @@
 from django.shortcuts import redirect, render
 from django.contrib import messages
 
-from webApp.models import Information
+from webApp.models import Information, Register
 
 # Create your views here.
 
@@ -36,4 +36,12 @@ def data(request):
     obj.save()
     messages.success(request, "Your profile was updated.")
     return redirect("/contact")
+
+# def register(request):
+#     a = request.POST.get('name1')
+#     b = request.POST.get('pass1')
     
+#     obj = Register(firstname=a,email=b)
+#     obj.save()
+#     messages.success(request, "Register successfully")
+#     return redirect('/login')
