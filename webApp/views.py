@@ -1,7 +1,7 @@
 from django.shortcuts import redirect, render
 from django.contrib import messages
 
-from webApp.models import Information, Register
+from webApp.models import Information
 
 # Create your views here.
 
