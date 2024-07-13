@@ -39,6 +39,7 @@ urlpatterns = [
     path('data', views.data),
     path('register', views.register),
     path('logincheck', views.logincheck),
+    path('cartitem', views.cartitem),
 ]
 
 if settings.DEBUG:  

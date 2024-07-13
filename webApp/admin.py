@@ -7,3 +7,4 @@ from webApp.models import *
 admin.site.register(Information)
 admin.site.register(Imageupload)
 admin.site.register(Signup)
+admin.site.register(cartproduct)

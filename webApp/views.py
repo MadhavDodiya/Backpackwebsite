@@ -65,4 +65,14 @@ def logincheck(request):
             messages.warning(request, "Login invalid!!")
             return redirect('/account')
             
-            
+def cartitem(request):
+    a=request.POST.get('name')
+    b=request.POST.get('img')
+    c=request.POST.get('prc')
+    
+    obj=cartproduct(name=a,img=b,price=c)
+    obj.save()
+    
+    obj1=cartproduct.objects.all()
+    
+    return render(request,'cart.html',{'data':obj1})
