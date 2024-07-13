@@ -38,11 +38,12 @@ def data(request):
     messages.success(request, "Your profile was updated.")
     return redirect("/contact")
 
-# def register(request):
-#     a = request.POST.get('name1')
-#     b = request.POST.get('pass1')
+def register(request):
+    a = request.POST.get('name1')
+    b = request.POST.get('pass1')
+    c = request.POST.get('email1')
     
-#     obj = Register(firstname=a,email=b)
-#     obj.save()
-#     messages.success(request, "Register successfully")
-#     return redirect('/login')
+    obj = Signup(firstname=a,password=b,email=c)
+    obj.save()
+    messages.success(request, "Register successfully")
+    return redirect('/account')

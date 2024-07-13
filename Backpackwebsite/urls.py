@@ -37,7 +37,7 @@ urlpatterns = [
     path('cart', views.cart),
     path('signup', views.signup),
     path('data', views.data),
-    # path('register', views.data)
+    path('register', views.register)
 ]
 
 if settings.DEBUG:  

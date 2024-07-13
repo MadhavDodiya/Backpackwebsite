@@ -19,9 +19,10 @@ class Imageupload(models.Model):
     def __str__(self):
         return self.name
 
-# class Register(models.Model):
-    # firstname=models.CharField(max_length=20)
-    # email=models.EmailField(max_length=20)
+class Signup(models.Model):
+    firstname=models.CharField(max_length=20)
+    password=models.CharField(max_length=20)
+    email=models.EmailField(max_length=254)
     
-    # def __str__(self):
-    #     return self.firstname
+    def __str__(self):
+        return self.firstname
