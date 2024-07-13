@@ -47,3 +47,22 @@ def register(request):
     obj.save()
     messages.success(request, "Register successfully")
     return redirect('/account')
+
+def logincheck(request):
+    a = request.POST.get('name1')
+    b = request.POST.get('pass1')
+    
+    obj=Signup.objects.all()
+    login = False
+    
+    for i in obj:
+        if ((i.firstname== a) or (i.email== a))   and i.password == b:
+            login=True
+            messages.success(request, "Login successfully")
+            return redirect('/index')
+                                                                                                                                                        
+        if login == False:
+            messages.warning(request, "Login invalid!!")
+            return redirect('/account')
+            
+            

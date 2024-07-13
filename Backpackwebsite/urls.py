@@ -29,7 +29,7 @@ admin.site.site_title = 'Madhav"s Website'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index),
+    path('index', views.index),
     path('shop', views.shop),
     path('blog', views.blog),
     path('account', views.account),
@@ -37,7 +37,8 @@ urlpatterns = [
     path('cart', views.cart),
     path('signup', views.signup),
     path('data', views.data),
-    path('register', views.register)
+    path('register', views.register),
+    path('logincheck', views.logincheck),
 ]
 
 if settings.DEBUG:  

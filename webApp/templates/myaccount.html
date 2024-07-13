@@ -176,19 +176,14 @@
   <div class="container">
     <div
       class="alert alert-{{ message.tags }} alert-dismissible fade show"
-      role="alert"
-    >
-      <strong>DONE BRO DONE!</strong> {{ message }}
-      <button
-        type="button"
-        class="btn-close"
-        data-bs-dismiss="alert"
-        aria-label="Close"
+      role="alert">
+      <strong></strong> {{ message }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"
       ></button>
     </div>
   </div>
   {% endfor %}
-  
+
   <!-- Login page -->
   <h1 class="text-center display-4 fntw mt-5 mb-3">Login</h1>
   <div class="container mb-5">
@@ -196,14 +191,14 @@
       <div class="col-md-3"></div>
       <div class="col-md-6" style="border: 2px solid #0000005d;border-radius: 5px">
         <div class="container p-3">
-          <form action="login" method="post">
+          <form action="logincheck" method="post">
             {% csrf_token %}
             <div class="row">
               <div class="container">
                 <p class="p-0">Username or email address *</p>
-                <input type="text" placeholder="Name" required class="p-3 w-100" style="outline: none;border: none">
+                <input type="text" placeholder="Name" required class="p-3 w-100" name="name1" style="outline: none;border: none">
                 <p class="p-0 mt-3">Password</p>
-                <input type="password" placeholder="Password" required class="p-3 w-100"
+                <input type="password" placeholder="Password" name="pass1" required class="p-3 w-100"
                   style="outline: none;border: none">
                 <p class="p-0 mt-4"><input type="checkbox" required> Remember me</p>
                 <center>
