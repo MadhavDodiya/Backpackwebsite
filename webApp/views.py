@@ -22,7 +22,8 @@ def contact(request):
     return render(request, 'contact.html')
 
 def cart(request):
-    return render(request, 'cart.html')
+    obj1=cartproduct.objects.all()
+    return render(request, 'cart.html',{'data':obj1})
 
 def signup(request):
     return render(request, 'signup.html')
@@ -70,9 +71,15 @@ def cartitem(request):
     b=request.POST.get('img')
     c=request.POST.get('prc')
     
-    obj=cartproduct(name=a,img=b,price=c)
+    obj=cartproduct(name=a, image=b,price=c)
     obj.save()
+    messages.success(request, "Item Add to Cart")
+    return redirect("/shop")
+
+def deletecart(request):
+    a=request.POST.get('cartproduct')
     
-    obj1=cartproduct.objects.all()
-    
-    return render(request,'cart.html',{'data':obj1})
+    obj=cartproduct.objects.get(id=a)
+    obj.delete()
+    messages.success(request, "Item Delete!!")
+    return redirect('/cart')

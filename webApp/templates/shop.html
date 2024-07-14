@@ -195,6 +195,18 @@
     </div>
   </div>
 
+  {% for message in messages %}
+    <div class="container">
+      <div
+        class="alert alert-{{ message.tags }} alert-dismissible fade show"
+        role="alert">
+        <strong></strong> {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"
+        ></button>
+      </div>
+    </div>
+    {% endfor %}
+
   <!-- First image row -->
   <div class="container-fluid" style="margin-top: 20px; margin-bottom: 20px">
     <div class="container">
@@ -204,15 +216,13 @@
           <div class="row">
             <div class="container">
               <img src="media/{{i.image}}" alt="" class="img-fluid" />
-
               <form action="cartitem" method="post">
                 {% csrf_token %}
                 <input type="text" name="name" value="{{i.name}}" hidden>
                 <input type="text" name="img" value="{{i.image}}" hidden>
                 <input type="text" name="prc" value="{{i.price}}" hidden>
-                <button class="btn1">Add to Cart</button>
+                <button class="btn1" type="submit">Add to Cart</button>
               </form>
-
             </div>
             <div class="container text-center">
               <span>Pet</span>

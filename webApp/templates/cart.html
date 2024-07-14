@@ -131,20 +131,44 @@
       </div>
     </div>
 
+    {% for message in messages %}
     <div class="container">
-      <table class="border border-1 border-black table table-bordered">
-        <tr>
+      <div
+        class="alert alert-{{ message.tags }} alert-dismissible fade show"
+        role="alert">
+        <strong></strong> {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"
+        ></button>
+      </div>
+    </div>
+    {% endfor %}
+
+    <div class="container">
+      <table class="table table-bordered rounded-1 table-hover table-dark">
+        <tr class="text-center">
+          <th></th>
           <th>Product</th>
+          <th>Name</th>
           <th>Price</th>
           <th>Quantity</th>
           <th>Subtotal</th>
         </tr>
-        <tr>
-          <td><button type="button" class="btn-close" aria-label="Close"></button><img src="media/{{i.image}}" alt=""></td>
+        {%for i in data%}
+        <tr class="text-center align-item-center">
+          <td>
+            <form action="deletecart" method="post">
+              {% csrf_token %}
+              <input type="text" name="cartproduct" value={{i.id}} hidden>
+              <button type="submit" class="btn-close" aria-label="Close"></button>
+            </form>
+          </td>
+          <td><img src="media/{{i.image}}" alt="" style="height: 100px;width:100px;"></td>
           <td>{{i.name}}</td>
           <td>{{i.price}}</td>
-          <td></td>
+          <td>1</td>
+          <td>50</td>
         </tr>
+        {%endfor%}
       </table>
     </div>
 

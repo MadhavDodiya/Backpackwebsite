@@ -40,6 +40,7 @@ urlpatterns = [
     path('register', views.register),
     path('logincheck', views.logincheck),
     path('cartitem', views.cartitem),
+    path('deletecart', views.deletecart),
 ]
 
 if settings.DEBUG:  
