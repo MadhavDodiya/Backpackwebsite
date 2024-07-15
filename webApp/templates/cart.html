@@ -4,227 +4,251 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'index.css' %}">
-    <script src="{% static 'script.js' %}"></script>
-    <!-- Latest compiled and minified CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'index.css' %}">
+  <script src="{% static 'script.js' %}"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Home</title>
-    <style>
-        /*navbar*/
-        .nav1 {
-            color: black;
-            text-decoration: none;
-        }
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Home</title>
+  <style>
+    /*navbar*/
+    .nav1 {
+      color: black;
+      text-decoration: none;
+    }
 
-        .nav1:hover {
-            color: red;
-            text-decoration: none;
-            transition: 0.5s;
-        }
+    .nav1:hover {
+      color: red;
+      text-decoration: none;
+      transition: 0.5s;
+    }
 
-        .a1 {
-          text-decoration: none;
-          color: black;
-        }
-    
-        .a1:hover {
-          text-decoration: none;
-          color: #dc3545;
-          transition: 0.5s;
-        }
-    
-        .b1 {
-          color: black;
-        }
-        /*footer*/
-        .fs1{
-            font-size: 50px;
-            color: #ff4545;
-            margin-bottom: 30px;
-        }
+    .a1 {
+      text-decoration: none;
+      color: black;
+    }
 
-        .bcb{
-            background-color: #222222;
-        }
-        .bcbb{
-            background-color: black;
-        }
-        
-        .dv{
-            height: 50px;
-            width: auto;
-            position: relative;
-            margin-top: 25px;
-        }
+    .a1:hover {
+      text-decoration: none;
+      color: #dc3545;
+      transition: 0.5s;
+    }
 
-        .b{color: white;text-decoration: none;}
-        .b:hover{color: #dc3545;transition: 0.5s;text-decoration: none;}
+    .b1 {
+      color: black;
+    }
 
-        .btn3{padding: 5px 10px;color: white;background-color: #ff4545;border: none;border-radius: 10px;}
-        .btn3:hover{padding: 5px 10px;color: white;background-color: #dc3545;border: none;border-radius: 10px;transition: 0.5s;}
-    </style>
+    /*footer*/
+    .fs1 {
+      font-size: 50px;
+      color: #ff4545;
+      margin-bottom: 30px;
+    }
+
+    .bcb {
+      background-color: #222222;
+    }
+
+    .bcbb {
+      background-color: black;
+    }
+
+    .dv {
+      height: 50px;
+      width: auto;
+      position: relative;
+      margin-top: 25px;
+    }
+
+    .b {
+      color: white;
+      text-decoration: none;
+    }
+
+    .b:hover {
+      color: #dc3545;
+      transition: 0.5s;
+      text-decoration: none;
+    }
+
+    .btn3 {
+      padding: 5px 10px;
+      color: white;
+      background-color: #ff4545;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .btn3:hover {
+      padding: 5px 10px;
+      color: white;
+      background-color: #dc3545;
+      border: none;
+      border-radius: 10px;
+      transition: 0.5s;
+    }
+  </style>
 </head>
 
 <body>
 
-    <div class="container-fluid bg-danger">
-        <div class="container d-flex align-item-center justify-content-end">
-            <span class="mt-1 mb-1 cl1">FREE DELIVERY OVER $100 ON ALL PRODUCTS</span>
-        </div>
+  <div class="container-fluid bg-danger">
+    <div class="container d-flex align-item-center justify-content-end">
+      <span class="mt-1 mb-1 cl1">FREE DELIVERY OVER $100 ON ALL PRODUCTS</span>
     </div>
+  </div>
 
-    <nav class="navbar navbar-expand-md sticky-top"
-        style="background-color:white;box-shadow: 0px 0px 15px 1px #808080c7">
-        <div class="container">
-            <a class="navbar-brand" href="#"><img style="width: 50%;" src="{% static 'img/logo.png' %}" alt=""></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item px-2">
-                        <a class="nav-link nav1" href="index">HOMEPAGE</a>
-                    </li>
-                    <li class="nav-item px-2">
-                        <a class="nav-link nav1" href="shop">SHOP</a>
-                    </li>
-                    <li class="nav-item px-2">
-                        <a class="nav-link nav1" href="blog">BLOG</a>
-                    </li>
-                    <li class="nav-item px-2">
-                        <a class="nav-link nav1" href="contact">CONTACT</a>
-                    </li>
-                    <li class="nav-item px-2">
-                        <a class="nav-link nav1" href="account">MY ACCOUNT</a>
-                    </li>
-                    <li class="nav-item px-2">
-                        <a class="nav-link nav1" href="cart">
-                            <i class="fa-solid fa-cart-shopping ion"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+  <nav class="navbar navbar-expand-md sticky-top" style="background-color:white;box-shadow: 0px 0px 15px 1px #808080c7">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img style="width: 50%;" src="{% static 'img/logo.png' %}" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item px-2">
+            <a class="nav-link nav1" href="index">HOMEPAGE</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link nav1" href="shop">SHOP</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link nav1" href="blog">BLOG</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link nav1" href="contact">CONTACT</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link nav1" href="account">MY ACCOUNT</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link nav1" href="cart">
+              <i class="fa-solid fa-cart-shopping ion"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid mb-5" style="background-color:#f5f5f5;">
+    <div class="container">
+      <div class="raw">
+        <div class="col-md-12 align-content-center" style="background-color:#f5f5f5;height: 100px">
+          <span style="font-size: 30px;">Cart</span>
+          <a href="cart" class="float-end align-content-center p-2 b1 a1">Cart</a>
         </div>
-    </nav>
+      </div>
+    </div>
+  </div>
 
-    <div class="container-fluid mb-5" style="background-color:#f5f5f5;">
+  {% for message in messages %}
+  <div class="container">
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+      <strong></strong> {{ message }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  </div>
+  {% endfor %}
+
+  <div class="container">
+    <table class="table table-bordered rounded-1 table-hover table-dark">
+      <tr class="text-center">
+        <th></th>
+        <th>Product</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Subtotal</th>
+      </tr>
+      {%for i in data%}
+      <tr class="text-center align-item-center">
+        <td>
+          <form action="deletecart" method="post">
+            {% csrf_token %}
+            <input type="text" name="cartproduct" value={{i.id}} hidden>
+            <button type="submit" class="btn-close" aria-label="Close"></button>
+          </form>
+        </td>
+        <td><img src="media/{{i.image}}" alt="" style="height: 100px;width:100px;"></td>
+        <td>{{i.name}}</td>
+        <td>{{i.price}}</td>
+        <td>1</td>
+        <td>50</td>
+      </tr>
+      {%endfor%}
+    </table>
+  </div>
+
+
+
+  <!-- footer  -->
+  <footer>
+    <div class="container-fluid bcb cl1 py-5">
       <div class="container">
-        <div class="raw">
-          <div class="col-md-12 align-content-center" style="background-color:#f5f5f5;height: 100px">
-            <span style="font-size: 30px;">Cart</span>
-            <a href="cart" class="float-end align-content-center p-2 b1 a1">Cart</a>
+        <div class="row">
+          <div class="col-md-3 mt-2">
+            <h6 class="mb-4" style="color: gray">CONTACT INFO</h6>
+            <p class="ps-4">London Eye, London, United Kingdom</p>
+            <p class="ps-4">621-254-2147</p>
+            <p class="ps-4"><a href="mailto:contact@support.com" class="b">contact@support.com</a></p>
+          </div>
+          <div class="col-md-3 mt-2">
+            <h6 class="mb-4" style="color: gray">INFORMATION</h6>
+            <ul class="ul">
+              <li><a href="#" class="b">About Us</a></li>
+              <li><a href="#" class="b">Store Location</a></li>
+              <li><a href="#" class="b">Contact Us</a></li>
+              <li><a href="#" class="b">Shipping & Delivery</a></li>
+              <li><a href="#" class="b">Latest News</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mt-2">
+            <h6 class="mb-4" style="color: gray">OUR SERVICE</h6>
+            <ul class="ul">
+              <li><a href="#" class="b">About Us</a></li>
+              <li><a href="#" class="b">Store Location</a></li>
+              <li><a href="#" class="b">Contact Us</a></li>
+              <li><a href="#" class="b">Shipping & Delivery</a></li>
+              <li><a href="#" class="b">Latest News</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mt-2">
+            <h6 class="mb-4" style="color: gray">NEWSLETTER</h6>
+            <div class="dv">
+              <input type="email" placeholder="Enter your email address"
+                style="width: 200px;padding: 5px 5px;border-radius: 5px;outline: none;color:white"
+                class="border-2 border-white bg-dark">
+              <button class="btn3">Go</button>
+            </div>
+            <input type="checkbox" class="mt-3">
+            <span>GDPR Checkbox Label</span>
           </div>
         </div>
       </div>
     </div>
 
-    {% for message in messages %}
-    <div class="container">
-      <div
-        class="alert alert-{{ message.tags }} alert-dismissible fade show"
-        role="alert">
-        <strong></strong> {{ message }}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"
-        ></button>
+    <div class="container-fluid bcbb cl1">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center py-2">
+            <p class="m-0">© COPYRIGHT - OCEANWP</p>
+          </div>
+        </div>
       </div>
     </div>
-    {% endfor %}
-
-    <div class="container">
-      <table class="table table-bordered rounded-1 table-hover table-dark">
-        <tr class="text-center">
-          <th></th>
-          <th>Product</th>
-          <th>Name</th>
-          <th>Price</th>
-          <th>Quantity</th>
-          <th>Subtotal</th>
-        </tr>
-        {%for i in data%}
-        <tr class="text-center align-item-center">
-          <td>
-            <form action="deletecart" method="post">
-              {% csrf_token %}
-              <input type="text" name="cartproduct" value={{i.id}} hidden>
-              <button type="submit" class="btn-close" aria-label="Close"></button>
-            </form>
-          </td>
-          <td><img src="media/{{i.image}}" alt="" style="height: 100px;width:100px;"></td>
-          <td>{{i.name}}</td>
-          <td>{{i.price}}</td>
-          <td>1</td>
-          <td>50</td>
-        </tr>
-        {%endfor%}
-      </table>
-    </div>
-
-
-
-    <!-- footer  -->
-    <footer>
-        <div class="container-fluid bcb cl1 py-5">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-3 mt-2">
-                <h6 class="mb-4" style="color: gray">CONTACT INFO</h6>
-                <p class="ps-4">London Eye, London, United Kingdom</p>
-                <p class="ps-4">621-254-2147</p>
-                <p class="ps-4"><a href="mailto:contact@support.com" class="b">contact@support.com</a></p>
-              </div>
-              <div class="col-md-3 mt-2">
-                <h6 class="mb-4" style="color: gray">INFORMATION</h6>
-                <ul class="ul">
-                  <li><a href="#" class="b">About Us</a></li>
-                  <li><a href="#" class="b">Store Location</a></li>
-                  <li><a href="#" class="b">Contact Us</a></li>
-                  <li><a href="#" class="b">Shipping & Delivery</a></li>
-                  <li><a href="#" class="b">Latest News</a></li>
-                </ul>
-              </div>
-              <div class="col-md-3 mt-2">
-                <h6 class="mb-4" style="color: gray">OUR SERVICE</h6>
-                <ul class="ul">
-                  <li><a href="#" class="b">About Us</a></li>
-                  <li><a href="#" class="b">Store Location</a></li>
-                  <li><a href="#" class="b">Contact Us</a></li>
-                  <li><a href="#" class="b">Shipping & Delivery</a></li>
-                  <li><a href="#" class="b">Latest News</a></li>
-                </ul>
-              </div>
-              <div class="col-md-3 mt-2">
-                <h6 class="mb-4" style="color: gray">NEWSLETTER</h6>
-                <div class="dv">
-                  <input type="email" placeholder="Enter your email address" style="width: 200px;padding: 5px 5px;border-radius: 5px;outline: none;color:white" class="border-2 border-white bg-dark">
-                  <button class="btn3">Go</button>
-                </div>
-                <input type="checkbox" class="mt-3">
-                <span>GDPR Checkbox Label</span>
-              </div>
-            </div>
-          </div>
-        </div>
-    
-        <div class="container-fluid bcbb cl1">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12 text-center py-2">
-                <p class="m-0">© COPYRIGHT - OCEANWP</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+  </footer>
+</body>
+</html>
