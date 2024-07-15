@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class Information(models.Model):
+class Information(models.Model): #cotact page table
     firstname=models.CharField(max_length=20)
     lastname=models.CharField(max_length=20)
     email=models.EmailField(max_length=50)
@@ -11,7 +11,7 @@ class Information(models.Model):
     def __str__(self):
         return self.firstname
 
-class Imageupload(models.Model):
+class Imageupload(models.Model): #shop page image upload table
     name=models.CharField(max_length=50)
     price=models.CharField(max_length=20)
     image=models.ImageField(upload_to='images')
@@ -19,7 +19,7 @@ class Imageupload(models.Model):
     def __str__(self):
         return self.name
 
-class Signup(models.Model):
+class Signup(models.Model): #signup page table
     firstname=models.CharField(max_length=20)
     password=models.CharField(max_length=20)
     email=models.EmailField(max_length=254)
@@ -27,7 +27,7 @@ class Signup(models.Model):
     def __str__(self):
         return self.firstname
     
-class cartproduct(models.Model):
+class cartproduct(models.Model): #cartitem added in cartpage
     name=models.CharField(max_length=20)
     image=models.ImageField(upload_to='images')
     price=models.CharField(max_length=20)

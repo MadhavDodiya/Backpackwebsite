@@ -55,28 +55,37 @@
             color: #ff6e68;
         }
 
-        .fs1{
+        .fs1 {
             font-size: 50px;
             color: #ff4545;
             margin-bottom: 30px;
         }
 
-        .bcb{
+        .bcb {
             background-color: #222222;
         }
-        .bcbb{
+
+        .bcbb {
             background-color: black;
         }
-        
-        .dv{
+
+        .dv {
             height: 50px;
             width: auto;
             position: relative;
             margin-top: 25px;
         }
 
-        .b{color: white;text-decoration: none;}
-        .b:hover{color: #dc3545;transition: 0.5s;text-decoration: none;}
+        .b {
+            color: white;
+            text-decoration: none;
+        }
+
+        .b:hover {
+            color: #dc3545;
+            transition: 0.5s;
+            text-decoration: none;
+        }
 
         /* font-wieght */
         .fntw {
@@ -124,8 +133,22 @@
             transition: 0.5s;
         }
 
-        .btn3{padding: 5px 10px;color: white;background-color: #ff4545;border: none;border-radius: 10px;}
-        .btn3:hover{padding: 5px 10px;color: white;background-color: #dc3545;border: none;border-radius: 10px;transition: 0.5s;}
+        .btn3 {
+            padding: 5px 10px;
+            color: white;
+            background-color: #ff4545;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .btn3:hover {
+            padding: 5px 10px;
+            color: white;
+            background-color: #dc3545;
+            border: none;
+            border-radius: 10px;
+            transition: 0.5s;
+        }
 
 
         /* height */
@@ -182,11 +205,20 @@
             </div>
         </div>
     </nav>
-    
+
     <div class="container-fluid img1 p-0 mb-5">
         <div class="container-fluid image-overlay">
             <div class="container">
                 <div class="container">
+                    {% for message in messages %}
+                            <div class="container">
+                                <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                                    <strong></strong> {{ message }}
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                                </div>
+                            </div>
+                            {% endfor %}
                     <div class="row">
                         <div class="col-md-6 cl1">
                             <p>NULLAM MAXIMUS SEMPER EST</p>
@@ -331,58 +363,60 @@
     <!-- footer  -->
     <footer>
         <div class="container-fluid bcb cl1 py-5">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-3 mt-2">
-                <h6 class="mb-4" style="color: gray">CONTACT INFO</h6>
-                <p class="ps-4">London Eye, London, United Kingdom</p>
-                <p class="ps-4">621-254-2147</p>
-                <p class="ps-4"><a href="mailto:contact@support.com" class="b">contact@support.com</a></p>
-              </div>
-              <div class="col-md-3 mt-2">
-                <h6 class="mb-4" style="color: gray">INFORMATION</h6>
-                <ul class="ul">
-                  <li><a href="#" class="b">About Us</a></li>
-                  <li><a href="#" class="b">Store Location</a></li>
-                  <li><a href="#" class="b">Contact Us</a></li>
-                  <li><a href="#" class="b">Shipping & Delivery</a></li>
-                  <li><a href="#" class="b">Latest News</a></li>
-                </ul>
-              </div>
-              <div class="col-md-3 mt-2">
-                <h6 class="mb-4" style="color: gray">OUR SERVICE</h6>
-                <ul class="ul">
-                  <li><a href="#" class="b">About Us</a></li>
-                  <li><a href="#" class="b">Store Location</a></li>
-                  <li><a href="#" class="b">Contact Us</a></li>
-                  <li><a href="#" class="b">Shipping & Delivery</a></li>
-                  <li><a href="#" class="b">Latest News</a></li>
-                </ul>
-              </div>
-              <div class="col-md-3 mt-2">
-                <h6 class="mb-4" style="color: gray">NEWSLETTER</h6>
-                <div class="dv">
-                  <input type="email" placeholder="Enter your email address" style="width: 200px;padding: 5px 5px;border-radius: 5px;outline: none;color:white" class="border-2 border-white bg-dark">
-                  <button class="btn3">Go</button>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 mt-2">
+                        <h6 class="mb-4" style="color: gray">CONTACT INFO</h6>
+                        <p class="ps-4">London Eye, London, United Kingdom</p>
+                        <p class="ps-4">621-254-2147</p>
+                        <p class="ps-4"><a href="mailto:contact@support.com" class="b">contact@support.com</a></p>
+                    </div>
+                    <div class="col-md-3 mt-2">
+                        <h6 class="mb-4" style="color: gray">INFORMATION</h6>
+                        <ul class="ul">
+                            <li><a href="#" class="b">About Us</a></li>
+                            <li><a href="#" class="b">Store Location</a></li>
+                            <li><a href="#" class="b">Contact Us</a></li>
+                            <li><a href="#" class="b">Shipping & Delivery</a></li>
+                            <li><a href="#" class="b">Latest News</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 mt-2">
+                        <h6 class="mb-4" style="color: gray">OUR SERVICE</h6>
+                        <ul class="ul">
+                            <li><a href="#" class="b">About Us</a></li>
+                            <li><a href="#" class="b">Store Location</a></li>
+                            <li><a href="#" class="b">Contact Us</a></li>
+                            <li><a href="#" class="b">Shipping & Delivery</a></li>
+                            <li><a href="#" class="b">Latest News</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 mt-2">
+                        <h6 class="mb-4" style="color: gray">NEWSLETTER</h6>
+                        <div class="dv">
+                            <input type="email" placeholder="Enter your email address"
+                                style="width: 200px;padding: 5px 5px;border-radius: 5px;outline: none;color:white"
+                                class="border-2 border-white bg-dark">
+                            <button class="btn3">Go</button>
+                        </div>
+                        <input type="checkbox" class="mt-3">
+                        <span>GDPR Checkbox Label</span>
+                    </div>
                 </div>
-                <input type="checkbox" class="mt-3">
-                <span>GDPR Checkbox Label</span>
-              </div>
             </div>
-          </div>
         </div>
-    
+
         <div class="container-fluid bcbb cl1">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12 text-center py-2">
-                <p class="m-0">© COPYRIGHT - OCEANWP</p>
-              </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center py-2">
+                        <p class="m-0">© COPYRIGHT - OCEANWP</p>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </footer>
-    
+    </footer>
+
 
 </body>
 
