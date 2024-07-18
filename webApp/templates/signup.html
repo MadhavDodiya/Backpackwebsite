@@ -67,6 +67,17 @@
             transition: 0.5s;
         }
 
+        .in1{
+            border: 1px solid #80808057;
+            outline: none;
+          }
+      
+          .in1:hover{
+            border: 1px solid #00000088;
+            outline: none;
+            transition: 0.5s;
+          }
+
         /*footer*/
         .fs1 {
             font-size: 50px;
@@ -186,13 +197,13 @@
                         <div class="row">
                             <div class="container">
                                 <p class="p-0" for="uname">Username or email address *</p>
-                                <input type="text" placeholder="Name" required class="p-3 w-100" name="name1" style="outline: none;border: none">
+                                <input type="text" placeholder="Name" required class="p-3 w-100 in1" name="name1">
 
                                 <p class="p-0 mt-3" for="pass">Password</p>
-                                <input type="password" placeholder="Password" required class="p-3 w-100" name="pass1" style="outline: none;border: none">
+                                <input type="password" placeholder="Password" required class="p-3 w-100 in1" name="pass1">
 
                                 <p class="p-0 mt-3" for="adrs">Email</p>
-                                <input type="email" placeholder="Email" required class="p-3 w-100" name="email1" style="outline: none;border: none">
+                                <input type="email" placeholder="Email" required class="p-3 w-100 in1" name="email1">
 
                                 <p class="p-0 mt-4"><input type="checkbox" required> Remember me</p>
                                 <center>
