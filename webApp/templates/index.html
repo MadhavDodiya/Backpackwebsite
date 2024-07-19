@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="{% static 'img/favicon.png' %}">
     <title>Home</title>
 
     <style>
@@ -211,14 +212,13 @@
             <div class="container">
                 <div class="container">
                     {% for message in messages %}
-                            <div class="container">
-                                <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-                                    <strong></strong> {{ message }}
-                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                        aria-label="Close"></button>
-                                </div>
-                            </div>
-                            {% endfor %}
+                    <div class="container">
+                        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                            <strong></strong> {{ message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    {% endfor %}
                     <div class="row">
                         <div class="col-md-6 cl1">
                             <p>NULLAM MAXIMUS SEMPER EST</p>
