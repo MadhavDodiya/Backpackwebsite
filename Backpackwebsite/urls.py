@@ -41,6 +41,8 @@ urlpatterns = [
     path('logincheck', views.logincheck),
     path('cartitem', views.cartitem),
     path('deletecart', views.deletecart),
+    path('increment', views.increment),
+    path('decriment', views.decriment),
 ]
 
 if settings.DEBUG:  

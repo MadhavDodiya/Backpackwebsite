@@ -186,8 +186,22 @@
         <td><img src="media/{{i.image}}" alt="" style="height: 100px;width:100px;"></td>
         <td>{{i.name}}</td>
         <td>{{i.price}}</td>
-        <td>1</td>
-        <td>50</td>
+        <td>
+          <form action="decriment" method="post" style="display: inline;">
+            {% csrf_token %}
+            <input type="text" name="id" value="{{i.id}}" hidden>
+            <input type="submit" class="btn btn-dark" value="-">
+          </form>
+          {{i.quantity}}
+          <form action="increment" method="post" style="display: inline;">
+            {% csrf_token %}
+            <input type="text" name="id" value="{{i.id}}" hidden>
+            <input type="submit" class="btn btn-dark" value="+">
+          </form>
+        </td>
+        <td>
+          $ {{i.subtotal}}.00
+        </td>
       </tr>
       {%endfor%}
     </table>

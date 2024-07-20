@@ -83,3 +83,25 @@ def deletecart(request):
     obj.delete()
     messages.success(request, "Item Delete!!")
     return redirect('/cart')
+
+def increment(request):
+    a=request.POST.get('id')
+    
+    obj=cartproduct.objects.get(id=a)
+    obj.quantity=int(obj.quantity)+1
+    obj.subtotal=int(obj.subtotal)+50
+    obj.save()
+    
+    return redirect('/cart')
+
+def decriment(request):
+    a=request.POST.get('id')
+    
+    obj=cartproduct.objects.get(id=a)
+    obj.quantity=int(obj.quantity)-1
+    obj.subtotal=int(obj.subtotal)-50
+    obj.save()
+    
+    if obj.quantity == 0:
+        obj.delete()
+    return redirect('/cart')
