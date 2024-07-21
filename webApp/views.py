@@ -57,14 +57,14 @@ def logincheck(request):
     login = False
     
     for i in obj:
-        if ((i.firstname== a) or (i.email== a))   and i.password == b:
+        if ((i.firstname== a) or (i.email== a)  and i.password == b):
             login=True
             messages.success(request, "Login successfully")
             return redirect('/index')
                                                                                                                                                         
-        if login == False:
-            messages.warning(request, "Login invalid!!")
-            return redirect('/account')
+    if login == False:
+        messages.warning(request, "Login invalid!!")
+        return redirect('/account')
             
 def cartitem(request):
     a=request.POST.get('name')
