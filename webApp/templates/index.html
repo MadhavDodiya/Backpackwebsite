@@ -1,6 +1,6 @@
 {% extends "base.html" %}
-{% load static %} 
-{% block title %} Home page {%endblock title %} 
+{% load static %}
+{% block title %} Home page {%endblock title %}
 {% block style %}
 <style>
   .nav1 {
@@ -144,26 +144,19 @@
 
 <body>
   {% block body %}
+  {% for message in messages %}
+  <div class="container">
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+      <strong></strong> {{ message }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  </div>
+  {% endfor %}
+  
   <div class="container-fluid img1 p-0 mb-5">
     <div class="container-fluid image-overlay">
       <div class="container">
         <div class="container">
-          {% for message in messages %}
-          <div class="container">
-            <div
-              class="alert alert-{{ message.tags }} alert-dismissible fade show"
-              role="alert"
-            >
-              <strong></strong> {{ message }}
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="alert"
-                aria-label="Close"
-              ></button>
-            </div>
-          </div>
-          {% endfor %}
           <div class="row">
             <div class="col-md-6 cl1">
               <p>NULLAM MAXIMUS SEMPER EST</p>

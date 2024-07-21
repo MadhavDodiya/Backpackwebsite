@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %} Shop page {%endblock title %} 
+{% block title %} Shop page {%endblock title %}
 {% block style %}
 <style>
   /*navbar*/
@@ -126,16 +126,13 @@
   </div>
 
   {% for message in messages %}
-    <div class="container">
-      <div
-        class="alert alert-{{ message.tags }} alert-dismissible fade show"
-        role="alert">
-        <strong></strong> {{ message }}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"
-        ></button>
-      </div>
+  <div class="container">
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+      <strong></strong> {{ message }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-    {% endfor %}
+  </div>
+  {% endfor %}
 
   <!-- First image row -->
   <div class="container-fluid" style="margin-top: 20px; margin-bottom: 20px">

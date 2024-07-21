@@ -6,7 +6,7 @@
   /*navbar*/
   .nav1 {
     color: black;
-    text-decoration: none;    
+    text-decoration: none;
   }
 
   .nav1:hover {
@@ -47,16 +47,17 @@
     transition: 0.5s;
   }
 
-  .in1{
+  .in1 {
     border: 1px solid #80808057;
     outline: none;
   }
 
-  .in1:hover{
+  .in1:hover {
     border: 1px solid #00000088;
     outline: none;
     transition: 0.5s;
   }
+
   /*footer*/
   .fs1 {
     font-size: 50px;
@@ -129,8 +130,7 @@
   <div class="container">
     <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
       <strong></strong> {{ message }}
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"
-      ></button>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
   </div>
   {% endfor %}
@@ -172,4 +172,5 @@
   </div>
   {% endblock body %}
 </body>
+
 </html>
