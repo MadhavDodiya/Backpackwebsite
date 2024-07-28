@@ -23,7 +23,12 @@ def contact(request):
 
 def cart(request):
     obj1=cartproduct.objects.all()
-    return render(request, 'cart.html',{'data':obj1})
+    newobj=list(obj1)
+    total=0
+    for i in newobj:
+        total=total+int(i.subtotal)
+    length=len(obj1)
+    return render(request, 'cart.html',{'data':obj1,"length":length,'totalAmount':total})
 
 def signup(request):
     return render(request, 'signup.html')
