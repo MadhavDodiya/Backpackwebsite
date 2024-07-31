@@ -29,7 +29,7 @@ admin.site.site_title = 'Madhav"s Website'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index', views.index),
+    path('', views.index),
     path('shop', views.shop),
     path('blog', views.blog),
     path('account', views.account),
