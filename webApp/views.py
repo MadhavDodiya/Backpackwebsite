@@ -65,7 +65,7 @@ def logincheck(request):
         if ((i.firstname== a) or (i.email== a)  and i.password == b):
             login=True
             messages.success(request, "Login successfully")
-            return redirect('/index')
+            return redirect('/')
                                                                                                                                                         
     if login == False:
         messages.warning(request, "Login invalid!!")
