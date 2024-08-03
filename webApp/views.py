@@ -9,8 +9,9 @@ def index(request):
     return render(request, 'index.html')
 
 def shop(request):
+    user=request.session['username']
     obj=Imageupload.objects.all()
-    return render(request, 'shop.html',{'data':obj})
+    return render(request, 'shop.html',{'data':obj,'name':user})
 
 def blog(request):
     return render(request, 'blog.html')
@@ -64,6 +65,7 @@ def logincheck(request):
     for i in obj:
         if ((i.firstname== a) or (i.email== a)  and i.password == b):
             login=True
+            request.session['username']=i.firstname
             messages.success(request, "Login successfully")
             return redirect('/')
                                                                                                                                                         
