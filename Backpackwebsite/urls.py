@@ -43,6 +43,7 @@ urlpatterns = [
     path('deletecart', views.deletecart),
     path('increment', views.increment),
     path('decriment', views.decriment),
+    path('logout', views.logout),
 ]
 
 if settings.DEBUG:  

@@ -6,9 +6,17 @@ from webApp.models import *
 # Create your views here.
 
 def index(request):
-    return render(request, 'index.html')
+    if(request.session.__contains__('username')):
+        username = request.session['username']
+    else:
+        username=""
+    return render(request, 'index.html',{'name':username})
 
 def shop(request):
+    if(request.session.__contains__('username')):
+        username=request.session['username']
+    else:
+        username=""
     user=request.session['username']
     obj=Imageupload.objects.all()
     return render(request, 'shop.html',{'data':obj,'name':user})
@@ -112,3 +120,11 @@ def decriment(request):
     if obj.quantity == 0:
         obj.delete()
     return redirect('/cart')
+
+def logout(request):
+    if(request.session['username']):
+        del request.session['username']
+        
+    messages.success(request, "log out successfully")
+    
+    return render(request,"index.html")
