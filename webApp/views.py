@@ -13,13 +13,13 @@ def index(request):
     return render(request, 'index.html',{'name':username})
 
 def shop(request):
-    if(request.session.__contains__('username')):
-        username=request.session['username']
-    else:
-        username=""
-    user=request.session['username']
+    # if(request.session.__contains__('username')):
+    #     username=request.session['username']
+    # else:
+    #     username=""
+    # user=request.session['username']
     obj=Imageupload.objects.all()
-    return render(request, 'shop.html',{'data':obj,'name':user})
+    return render(request, 'shop.html',{'data':obj})
 
 def blog(request):
     return render(request, 'blog.html')
@@ -122,8 +122,8 @@ def decriment(request):
     return redirect('/cart')
 
 def logout(request):
-    if(request.session['username']):
-        del request.session['username']
+    # if(request.session['username']):
+    #     del request.session['username']
         
     messages.success(request, "log out successfully")
     
